@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bi8m4alvgop56"]
+
+[ext_resource type="PackedScene" uid="uid://ble721brpc0r4" path="res://Scenes/Environment/wall_ground.tscn" id="1_s0gyx"]
+[ext_resource type="PackedScene" uid="uid://sri1x8dmat7y" path="res://Scenes/Entity/Player/player.tscn" id="2_yjsus"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Environment" type="Node2D" parent="."]
+
+[node name="Wall_Ground" parent="Environment" instance=ExtResource("1_s0gyx")]
+position = Vector2(447, 697)
+scale = Vector2(1.76, 1)
+
+[node name="Entity" type="Node2D" parent="."]
+
+[node name="Player" parent="Entity" instance=ExtResource("2_yjsus")]
+position = Vector2(498, 569)

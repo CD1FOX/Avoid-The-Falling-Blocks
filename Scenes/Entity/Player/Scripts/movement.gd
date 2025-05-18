@@ -1,6 +1,6 @@
 extends Node2D
 
-func Left_And_Right():
+func LeftAndRight():
 	var direction = 0
 	
 	if Input.is_action_pressed("Left"):
@@ -9,3 +9,4 @@ func Left_And_Right():
 		direction += 1
 	
 	return direction
+	

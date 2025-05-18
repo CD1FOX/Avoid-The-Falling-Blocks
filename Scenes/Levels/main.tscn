@@ -1,9 +1,41 @@
-[gd_scene load_steps=3 format=3 uid="uid://bi8m4alvgop56"]
+[gd_scene load_steps=5 format=3 uid="uid://bi8m4alvgop56"]
 
 [ext_resource type="PackedScene" uid="uid://ble721brpc0r4" path="res://Scenes/Environment/wall_ground.tscn" id="1_s0gyx"]
-[ext_resource type="PackedScene" uid="uid://sri1x8dmat7y" path="res://Scenes/Entity/Player/player.tscn" id="2_yjsus"]
+[ext_resource type="Script" uid="uid://be2qrgfp1rysw" path="res://Scenes/Collectibles/Coin/coin_spawner.gd" id="3_7i1ub"]
+[ext_resource type="PackedScene" uid="uid://s21p3mn01xp0" path="res://Scenes/Entity/Player/player.tscn" id="3_nk5xi"]
+[ext_resource type="Script" uid="uid://dwydlj2l36qk4" path="res://Scenes/Designs/Labels/score.gd" id="4_nk5xi"]
 
 [node name="Main" type="Node2D"]
+
+[node name="Entity" type="Node2D" parent="."]
+
+[node name="Player" parent="Entity" instance=ExtResource("3_nk5xi")]
+position = Vector2(489, 569)
+
+[node name="Collectible" type="Node2D" parent="."]
+
+[node name="CoinSpawner" type="Node2D" parent="Collectible"]
+script = ExtResource("3_7i1ub")
+
+[node name="SpawnerCooldown" type="Timer" parent="Collectible/CoinSpawner"]
+
+[node name="SpawnerCooldown2" type="Timer" parent="Collectible/CoinSpawner"]
+
+[node name="SpawnerCooldown3" type="Timer" parent="Collectible/CoinSpawner"]
+
+[node name="SpawnerCooldown4" type="Timer" parent="Collectible/CoinSpawner"]
+
+[node name="SpawnerCooldown5" type="Timer" parent="Collectible/CoinSpawner"]
+
+[node name="SpawnerCooldown6" type="Timer" parent="Collectible/CoinSpawner"]
+
+[node name="SpawnerCooldown7" type="Timer" parent="Collectible/CoinSpawner"]
+
+[node name="SpawnerCooldown8" type="Timer" parent="Collectible/CoinSpawner"]
+
+[node name="SpawnerCooldown9" type="Timer" parent="Collectible/CoinSpawner"]
+
+[node name="SpawnerCooldown10" type="Timer" parent="Collectible/CoinSpawner"]
 
 [node name="Environment" type="Node2D" parent="."]
 
@@ -11,7 +43,23 @@
 position = Vector2(447, 697)
 scale = Vector2(1.76, 1)
 
-[node name="Entity" type="Node2D" parent="."]
+[node name="ScreenDesign" type="Node2D" parent="."]
 
-[node name="Player" parent="Entity" instance=ExtResource("2_yjsus")]
-position = Vector2(498, 569)
+[node name="Score" type="Label" parent="ScreenDesign"]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 50
+text = "Score: "
+script = ExtResource("4_nk5xi")
+
+[connection signal="timeout" from="Collectible/CoinSpawner/SpawnerCooldown" to="Collectible/CoinSpawner" method="_on_spawner_cooldown_timeout"]
+[connection signal="timeout" from="Collectible/CoinSpawner/SpawnerCooldown2" to="Collectible/CoinSpawner" method="_on_spawner_cooldown_2_timeout"]
+[connection signal="timeout" from="Collectible/CoinSpawner/SpawnerCooldown3" to="Collectible/CoinSpawner" method="_on_spawner_cooldown_3_timeout"]
+[connection signal="timeout" from="Collectible/CoinSpawner/SpawnerCooldown4" to="Collectible/CoinSpawner" method="_on_spawner_cooldown_4_timeout"]
+[connection signal="timeout" from="Collectible/CoinSpawner/SpawnerCooldown4" to="Collectible/CoinSpawner" method="_on_spawner_cooldown_3_timeout"]
+[connection signal="timeout" from="Collectible/CoinSpawner/SpawnerCooldown5" to="Collectible/CoinSpawner" method="_on_spawner_cooldown_5_timeout"]
+[connection signal="timeout" from="Collectible/CoinSpawner/SpawnerCooldown6" to="Collectible/CoinSpawner" method="_on_spawner_cooldown_6_timeout"]
+[connection signal="timeout" from="Collectible/CoinSpawner/SpawnerCooldown7" to="Collectible/CoinSpawner" method="_on_spawner_cooldown_7_timeout"]
+[connection signal="timeout" from="Collectible/CoinSpawner/SpawnerCooldown8" to="Collectible/CoinSpawner" method="_on_spawner_cooldown_8_timeout"]
+[connection signal="timeout" from="Collectible/CoinSpawner/SpawnerCooldown9" to="Collectible/CoinSpawner" method="_on_spawner_cooldown_9_timeout"]
+[connection signal="timeout" from="Collectible/CoinSpawner/SpawnerCooldown10" to="Collectible/CoinSpawner" method="_on_spawner_cooldown_10_timeout"]

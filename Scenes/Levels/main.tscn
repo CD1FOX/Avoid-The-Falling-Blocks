@@ -17,26 +17,6 @@ position = Vector2(489, 569)
 [node name="CoinSpawner" type="Node2D" parent="Collectible"]
 script = ExtResource("3_7i1ub")
 
-[node name="SpawnerCooldown" type="Timer" parent="Collectible/CoinSpawner"]
-
-[node name="SpawnerCooldown2" type="Timer" parent="Collectible/CoinSpawner"]
-
-[node name="SpawnerCooldown3" type="Timer" parent="Collectible/CoinSpawner"]
-
-[node name="SpawnerCooldown4" type="Timer" parent="Collectible/CoinSpawner"]
-
-[node name="SpawnerCooldown5" type="Timer" parent="Collectible/CoinSpawner"]
-
-[node name="SpawnerCooldown6" type="Timer" parent="Collectible/CoinSpawner"]
-
-[node name="SpawnerCooldown7" type="Timer" parent="Collectible/CoinSpawner"]
-
-[node name="SpawnerCooldown8" type="Timer" parent="Collectible/CoinSpawner"]
-
-[node name="SpawnerCooldown9" type="Timer" parent="Collectible/CoinSpawner"]
-
-[node name="SpawnerCooldown10" type="Timer" parent="Collectible/CoinSpawner"]
-
 [node name="Environment" type="Node2D" parent="."]
 
 [node name="Wall_Ground" parent="Environment" instance=ExtResource("1_s0gyx")]
@@ -51,15 +31,3 @@ offset_bottom = 23.0
 theme_override_font_sizes/font_size = 50
 text = "Score: "
 script = ExtResource("4_nk5xi")
-
-[connection signal="timeout" from="Collectible/CoinSpawner/SpawnerCooldown" to="Collectible/CoinSpawner" method="_on_spawner_cooldown_timeout"]
-[connection signal="timeout" from="Collectible/CoinSpawner/SpawnerCooldown2" to="Collectible/CoinSpawner" method="_on_spawner_cooldown_2_timeout"]
-[connection signal="timeout" from="Collectible/CoinSpawner/SpawnerCooldown3" to="Collectible/CoinSpawner" method="_on_spawner_cooldown_3_timeout"]
-[connection signal="timeout" from="Collectible/CoinSpawner/SpawnerCooldown4" to="Collectible/CoinSpawner" method="_on_spawner_cooldown_4_timeout"]
-[connection signal="timeout" from="Collectible/CoinSpawner/SpawnerCooldown4" to="Collectible/CoinSpawner" method="_on_spawner_cooldown_3_timeout"]
-[connection signal="timeout" from="Collectible/CoinSpawner/SpawnerCooldown5" to="Collectible/CoinSpawner" method="_on_spawner_cooldown_5_timeout"]
-[connection signal="timeout" from="Collectible/CoinSpawner/SpawnerCooldown6" to="Collectible/CoinSpawner" method="_on_spawner_cooldown_6_timeout"]
-[connection signal="timeout" from="Collectible/CoinSpawner/SpawnerCooldown7" to="Collectible/CoinSpawner" method="_on_spawner_cooldown_7_timeout"]
-[connection signal="timeout" from="Collectible/CoinSpawner/SpawnerCooldown8" to="Collectible/CoinSpawner" method="_on_spawner_cooldown_8_timeout"]
-[connection signal="timeout" from="Collectible/CoinSpawner/SpawnerCooldown9" to="Collectible/CoinSpawner" method="_on_spawner_cooldown_9_timeout"]
-[connection signal="timeout" from="Collectible/CoinSpawner/SpawnerCooldown10" to="Collectible/CoinSpawner" method="_on_spawner_cooldown_10_timeout"]
